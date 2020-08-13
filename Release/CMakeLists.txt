@@ -122,7 +122,7 @@ if(ANDROID)
   set(ANDROID_LIBS atomic dl)
 elseif(UNIX) # This includes OSX
 elseif(WIN32)
-  add_definitions(-DUNICODE -D_UNICODE -DWIN32 -D_SCL_SECURE_NO_WARNINGS)
+  add_definitions(-DUNICODE -D_UNICODE -DWIN32 -D_SCL_SECURE_NO_WARNINGS -D_ITERATOR_DEBUG_LEVEL=0)
   if(CMAKE_SYSTEM_NAME STREQUAL "WindowsStore")
     add_definitions(-D_WIN32_WINNT=0x0A00)
   else()
